@@ -1,0 +1,144 @@
+/* Ümumi stillər */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark theme */
+.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #6a00ff;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+header button {
+  font-size: 1.8rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s;
+}
+
+header button:hover {
+  transform: rotate(20deg);
+}
+
+/* Main content */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Gallery grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark .card {
+  background: #1e1e1e;
+  color: #ccc;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+.card p {
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+  max-height: none;
+  overflow: visible;
+  white-space: normal;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #6200ee;
+  color: white;
+  margin-top: 4rem;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #ffc400;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  .card img {
+    height: 250px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
